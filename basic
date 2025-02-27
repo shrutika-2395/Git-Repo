@@ -1,0 +1,29 @@
+# Initialize a new Git repository
+git init
+
+# Check the status of your repository
+git status
+
+# Add files to the staging area
+git add <file>
+
+# Commit changes to the repository
+git commit -m "Your commit message"
+
+# View the commit history
+git log
+
+# Create a new branch
+git branch <branch-name>
+
+# Switch to a different branch
+git checkout <branch-name>
+
+# Merge a branch into the current branch
+git merge <branch-name>
+
+# Push changes to a remote repository
+git push <remote> <branch>
+
+# Pull changes from a remote repository
+git pull <remote> <branch>

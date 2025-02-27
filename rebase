@@ -1,0 +1,35 @@
+```markdown
+# Git Rebase
+
+The `git rebase` command allows you to move or combine a sequence of commits to a new base commit. It is a powerful tool for streamlining a feature branch's history before merging it into the main branch. By using `git rebase`, you can ensure a cleaner, more linear project history.
+
+## Basic Usage
+
+To rebase the current branch onto another branch, use:
+```sh
+git rebase <base-branch>
+```
+
+## Interactive Rebase
+
+For more control over the rebase process, use the interactive mode:
+```sh
+git rebase -i <base-branch>
+```
+This allows you to edit, reorder, squash, or drop commits.
+
+## Example
+
+```sh
+git checkout feature-branch
+git rebase main
+```
+This moves the `feature-branch` commits to the tip of the `main` branch.
+
+## Common Options
+
+- `--onto`: Rebase onto a different base.
+- `--continue`: Continue the rebase after resolving conflicts.
+- `--abort`: Abort the rebase and return to the original branch.
+
+Use `git rebase` with caution, especially on shared branches, as it rewrites commit history.

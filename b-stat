@@ -1,0 +1,33 @@
+# Branching Strategy
+
+## Main Branches
+- `main`: The main branch where the source code of HEAD always reflects a production-ready state.
+- `develop`: The main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release.
+
+## Supporting Branches
+- `feature/*`: Feature branches are used to develop new features for the upcoming or a distant future release. 
+    - Branch off from: `develop`
+    - Merge back into: `develop`
+    - Naming convention: anything except `main`, `develop`, `release-*`, or `hotfix-*`
+
+- `release/*`: Release branches support preparation of a new production release. 
+    - Branch off from: `develop`
+    - Merge back into: `main` and `develop`
+    - Naming convention: `release-*`
+
+- `hotfix/*`: Hotfix branches are necessary to act immediately upon an undesired status of `main`.
+    - Branch off from: `main`
+    - Merge back into: `main` and `develop`
+    - Naming convention: `hotfix-*`
+
+## Workflow
+1. Create a new branch from `develop` for a new feature.
+2. Work on the feature branch and commit changes.
+3. Once the feature is complete, merge the feature branch back into `develop`.
+4. When `develop` has enough features for a release, create a `release` branch.
+5. Test and fix bugs on the `release` branch.
+6. Once the release is ready, merge the `release` branch into `main` and tag the release.
+7. If any critical bugs are found in `main`, create a `hotfix` branch from `main`.
+8. Fix the bug on the `hotfix` branch and merge it back into both `main` and `develop`.
+
+This strategy helps in maintaining a clean and organized workflow for development, testing, and production releases.
