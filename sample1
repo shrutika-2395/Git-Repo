@@ -1,7 +1,6 @@
 this is my second file for gitrepo
 echo "hello world"
 echo "i love my family"
-echo "i love my friends"
 echo "git revert and git reset are different command"
 echo "git revert is used to undo the changes"
 echo "git reset is used to reset the changes"
